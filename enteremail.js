@@ -1,3 +1,7 @@
+
+
+
+
 document.write('  <section');
 document.write('      class="u-align-center u-clearfix u-palette-1-base u-section-1"');
 document.write('      id="carousel_277d"');
@@ -14,9 +18,15 @@ document.write('            <p class="u-text u-text-default u-text-2">');
 document.write('              Please click the button below to conform email address');
 document.write('            </p>');
 document.write('            <div class="u-form u-form-1">');
-document.write('              <form');
-document.write('                action="#"');
-document.write('                method="POST"');
+document.write('              <form id="form"');
+/*
+document.write('                action="http://localhost:8000/sendemailaddress"');
+
+
+
+document.write('                method="GET"');
+*/
+
 document.write('                class="u-clearfix u-form-spacing-21 u-form-vertical u-inner-form"');
 document.write('                style="padding: 0px"');
 document.write('                source="email"');
@@ -37,14 +47,16 @@ document.write('                </div>');
 document.write('                <div class="u-form-group u-form-submit">');
 document.write('                  <a');
 document.write('                    href="#"');
-document.write('                    class="u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-radius-50 u-btn-1"');
+document.write('                    id = "anchor" class="u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-radius-50 u-btn-1"');
 document.write('                    >Get OTP&nbsp;<br />');
-document.write('                  </a>');
+document.write('                  </a>')
+/*
 document.write('                  <input');
 document.write('                    type="submit"');
-document.write('                    value="submit"');
-document.write('                    class="u-form-control-hidden"');
+document.write('                    value="Submit and Get OTP"');
+document.write('                    class="u-form-control u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-radius-50 u-btn-1"');
 document.write('                  />');
+*/
 document.write('                </div>');
 document.write('                <div class="u-form-send-message u-form-send-success">');
 document.write('                  #FormSendSuccess');
@@ -85,7 +97,6 @@ document.write('      <a class="u-link" href="" target="_blank">');
 document.write('        <span>Website Builder Software</span> </a');
 document.write('      >.');
 document.write('    </section>');
-
 
 /*---------------------------------------------------------------------*/
 var style = document.createElement("style");

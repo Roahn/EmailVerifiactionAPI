@@ -2,7 +2,14 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
+from pydantic import BaseModel
+import sendemail
 app = FastAPI()
+
+
+class EmailAdd(BaseModel):
+    email:str
+
 
 origins = [
     "http://localhost.tiangolo.com",
@@ -31,7 +38,17 @@ async def Nice():
 '''
 
 
+@app.get("/js/handle", response_class=FileResponse)
+async def javascript():
+    return FileResponse("./handle.js")
 @app.get("/js/enter", response_class=FileResponse)
 async def javascript():
     return FileResponse("./enteremail.js")
 
+@app.get('/sendemailaddress/{email}')
+def getemail(email):
+    print(email)
+    OTP_TEXT = sendemail.OTP()
+    sendemail.send(email, OTP_TEXT)
+
+    return {"email": email,"OTP":OTP_TEXT}
